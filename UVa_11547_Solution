@@ -1,0 +1,35 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
+    int tc,n,r;
+    cin>>tc;
+    while(tc--)
+    {
+        int co=0,rem=0;
+        cin>>n;
+        r=((((((n*567)/9)+7492)*235)/47)-498);
+        while(r!=0)
+        {
+            int a=r%10;
+            int rem=(rem*10)+a;
+            r/=10;
+            co++;
+            if(co==2){
+                    if(a<0)
+                    {
+                        cout<<(-1)*a<<endl;
+                        break;
+                    }
+                    else{
+                        cout<<a<<endl;
+                        break;
+                    }
+            }
+        }
+        co=0;
+        r=0;
+    }
+    return 0;
+}
